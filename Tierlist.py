@@ -1,16 +1,19 @@
 import random
 import time
 
-
 pool = []
+
+
 def choice():
     inp = input("How many choices do you want? ")
     for i in range(int(inp)):
-        i +=1
+        i += 1
         inp2 = input("Choice #" + str(i) + ': ')
         inp2 += ' > '
         pool.append(inp2)
     gen(True)
+
+
 def gen(doInput):
     if doInput == True:
         inp = input("Do you want to generate a tier list? (yes/no) ")
@@ -53,4 +56,6 @@ def gen(doInput):
         final_key = key + "nothing"
         print('Tier list: ' + final_key)
         gen(True)
+
+
 choice()
